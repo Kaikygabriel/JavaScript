@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        menu{
+            display: none;
+            height: 100px;
+            width: 100px;
+            background-color: black;
+            color:white ;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            border-radius: 50%;
+        }
+        #botao{
+            height: 100px;
+            width: 150px;
+            background-color: blue;
+            color: white;
+            border-radius: 7px;
+            position: absolute;
+            top: 10%;
+            left: 30%;
+            transform: translate(-10%,-10%);
+            cursor: pointer;
+        }
+        
+    </style>
+</head>
+<body>
+    <input type="button" value="botao" id="botao" onclick="clicou()">
+    <menu id="menuu">
+       <ul>
+        <il>1</il>
+        <il>2</il>
+        <il>3</il>
+       </ul>
+    </menu>
+    <script>
+        function clicou () {
+            if (menuu.style.display == 'block'){
+                menuu.style.display = 'none'
+            }else {
+                menuu.style.display = 'block'
+            }
+        }
+    </script>
+</body>
+</html>
