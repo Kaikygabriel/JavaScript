@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando numeros</title>
+</head>
+<body>
+    <h1>Somando Numeros</h1>
+    <input type="number" name="" id="txt1">
+    +
+    <input type="number" name="" id="txt2">
+    <p id="res">resultado</p>
+    <input type="button" value="Somar" onclick="clicou()">
+   
+    <script>
+        function clicou(){
+        var resu = document.getElementById('res')
+        var num1 = document.getElementById('txt1')
+        var num2 = document.getElementById('txt2')
+        var n1 = Number(num1.value)
+        var n2 = Number(num2.value)
+        // para pegar o valor em numero ao inves de string
+        var resultado = n1 + n2
+        resu.innerHTML = `resultado é ${resultado}`
+        }
+    </script>
+</body>
+</html>

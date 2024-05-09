@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudando DOM</title>
+    <style>
+        #area{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, Helvetica, sans-serif;
+            width: 200px;
+            height: 200px;
+            cursor: pointer;
+            background-color: blue;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+    <div id="area"  onclick="clicar()" onmouseenter="entrar()" onmouseout="saiu()">
+        Interaja..
+    </div>
+    <script>
+        var a1 = document.getElementById('area')
+     function clicar (){        
+        a1.innerText ='clicou'
+     } 
+
+     function entrar(){
+        a1.style.backgroundColor = 'lightblue'
+        a1.innerText = 'mouse entrou '
+     }
+
+     function saiu(){
+        a1.innerText = 'mouse saiu'
+        a1.style.backgroundColor = 'blue'
+     }
+    </script>
+</body>
+</html>

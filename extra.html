@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>treinando dom</title>
+    <style>
+        input{
+            position: absolute;
+            top: 50%;
+            left: 59%;
+            transform: translate(-50%,-50%);
+            width: 100px;
+            height: 40px;
+            transition: color .22s, background-color .22s, width .33s, height .44s ;
+            /* tempo para acontecer a mudança do script
+            
+            coloquei um if e else para fazer ele volta no lugar dinovo
+            
+            o backgoundColor ele vai testar somente na tag no html se ele tem background color igual white
+            */
+            background-color: white;
+            
+        }
+    </style>
+</head>
+<body>
+    <input type="button" value="click" onclick="clicou()" id="botao" style="background-color: white;">
+    <script>
+        function clicou(){
+            var bt = document.getElementById('botao')
+            if (bt.style.backgroundColor == 'white'){
+             bt.style.color = 'white'
+            bt.style.backgroundColor = 'blue'
+            bt.style.width = '200px'
+            bt.style.height = '80px'
+            } else{
+                bt.style.color = 'black'
+                bt.style.backgroundColor = 'white'
+            bt.style.width = '100px'
+            bt.style.height = '40px'
+            }
+        }
+    </script>
+</body>
+</html>
