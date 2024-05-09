@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo dom </title>
+    <style>
+        body{
+            background-color: lightblue;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos DOM</h1>
+    <p>ola
+    </p>
+    <p>aqui vai o resultado</p>
+    <div id="msg">click em mim</div>
+    <script>
+        // seria como selecionar no css
+        // e um metodo mais recente os navegadores antigos não vai''query selector'
+        var  d = window.document.querySelector('div#msg')
+    </script>
+</body>
+</html>

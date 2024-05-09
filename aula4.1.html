@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo dom </title>
+    <style>
+        body{
+            background-color: lightblue;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos DOM</h1>
+    <p>ola
+    </p>
+    <p>aqui vai o resultado</p>
+    <div>click em mim</div>
+    <script>
+        // serve para saber a ordem []
+        var corpo = document.body
+        var p1 = document.getElementsByTagName('p') [0]
+        corpo.style.backgroundColor = 'black'
+        document.write(`repetindo a palavra ${p1.innerHTML}`)
+        p1.style.fontSize= '20px'
+        p1.style.color = 'blue'
+    </script>
+</body>
+</html>

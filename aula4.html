@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo  </title>
+    <style>
+        body{
+            background-color: lightblue;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos DOM</h1>
+    <p>ola
+    </p>
+    <div id="oi">aqui vai o resultado</div>
+    <p id="msg" onclick="clicou()">click em mim</p>
+    <script>
+        var d = document.getElementById('msg')
+        d.style.backgroundColor = 'black'
+       d.style.padding = '20px'
+       d.style.width = '100px'
+       d.style.borderRadius = '6px'
+    //    d.innerHTML = "estou indo..."
+    //   modifiquei o texto com innerHTML ou com InnerTEXT
+    // ou
+    document.getElementById('msg').innerText = "Estou Indo..."
+    </script>
+</body>
+</html>
