@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>testando</title>
+    <style>
+        h1{
+            background-color: rgba(211, 211, 211, 0.671);
+            width: 220px;
+            height: 120px;
+            text-align: center;
+            border-radius: 5px;
+           margin: auto;
+        }
+        
+        div{
+            margin: auto;
+            background-color: black;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="h1cor">Mude a cor para escuro ou claro</h1>
+    <input id="mudar" type="button" value="Mude para escuro" onclick="escuro()" style="background-color: lightgray;">
+    <div id="dd"></div>
+   
+    <script>
+        var md = document.getElementById('mudar')
+        md.style.cursor = 'pointer'
+        function escuro(){
+
+            var txt = document.getElementById('h1cor')
+            var ddd = document.getElementById('dd')
+            var corpo = document.body 
+
+            if (md.style.backgroundColor == 'lightgray'){
+            md.style.backgroundColor = 'white'
+            md.style.color = 'black'
+            md.style.border = '3px solid gray'
+            corpo.style.backgroundColor = 'black'
+            ddd.style.backgroundColor = 'white'
+            txt.style.backgroundColor = 'white'
+            } else {
+                md.style.backgroundColor = 'lightgray'
+            md.style.color = 'black'
+            md.style.border = '2px solid black'
+            corpo.style.backgroundColor = 'white'
+            ddd.style.backgroundColor = 'black'
+            txt.style.backgroundColor = 'lightgray'
+            }
+            
+        }
+    </script>
+</body>
+</html>
