@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> </title>
+    <style>
+        *{
+            padding: 0px;
+            margin:0px;
+
+        }
+        .imgdiv{
+            background-image: url(pexels-pealdesign-12859589.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            height: 300px;
+            width: 300px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            border-radius: 7px;
+            transition: .4s;
+            cursor: 30px;
+        }
+        .imgdiv:hover{
+            cursor: zoom-in;
+        }
+        .click{
+            transition: margin .7s;
+            text-align: center;
+            margin-top: 300px;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <main>
+    <div class="imgdiv" id="img1" onclick="clicou()" style="width: 300px;height: 300px;"></div>
+
+    <p class="click" id="aumenta">Click para aumentar a imagen</p>
+    </main>
+    <script>
+        var au = document.getElementById('aumenta')
+        var img = document.getElementById('img1')
+
+        function clicou(){
+
+            if (img.style.width === '300px'){
+                au.innerText = 'click para abaixar a imagen'
+                au.style.marginTop = '230px'
+                img.style.width = '400px'
+                img.style.height = '400px'   
+                img.style.cursor  = 'zoom-out'
+            } else {
+                au.innerText = 'click para aumentar a imagen'
+                au.style.marginTop = '300px'
+                img.style.width = '300px'
+                img.style.height = '300px'
+                img.style.cursor = 'zoom-in'
+            }
+        }
+    </script>
+</body>
+</html>
