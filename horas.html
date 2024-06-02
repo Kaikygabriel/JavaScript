@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horas do dia</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        html,body{
+            height: 100vh;
+            width: 100vw;
+            background-color: white;
+        }
+        main{
+            background-color: rgb(83, 138, 240);
+            width: 320px;
+            height: 425px;
+            border-radius: 10px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            display: flex;
+            justify-content: center;
+        }
+        div#fundo{
+           height: 200px;
+           width: 200px;
+           border-radius: 50%;
+           background-color: whitesmoke;
+           margin-top: 10px;
+           background-size: cover;
+           background-position: center center;
+           background-repeat: no-repeat;
+        }
+        div#texto{
+            font-size: 18px;
+            color: white;
+            font-weight: bold;
+            margin-top: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, 70%);
+        }
+    </style>
+</head>
+<body>
+    <main id="main1">
+        <div id="texto"><p>Agora é</p></div>
+        <div id="fundo"></div>
+    </main>
+    <script>
+        var dia = new Date
+        var hora = dia.getHours()
+
+        var mn = document.getElementById('main1')
+        var txt = document.getElementById('texto')
+        var ft = document.getElementById('fundo')
+
+        if (hora <= 12 && hora >= 6){
+            
+            txt.innerText = 'bom dia'
+            ft.style.backgroundImage = 'url(dia.jpg)'
+         } else if(hora <= 18 && hora >= 13){
+            txt.innerText = 'boa tarde'
+            ft.style.backgroundImage = 'url(tarde.jpg)'
+        }  else{
+            txt.innerText = 'boa noite ou boa madrugada'
+            ft.style.backgroundImage = 'url(noite.jpg)'
+        }
+    </script>
+</body>
+</html>
