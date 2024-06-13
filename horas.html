@@ -55,6 +55,7 @@
         <div id="fundo"></div>
     </main>
     <script>
+
         var dia = new Date
         var hora = dia.getHours()
 
@@ -62,14 +63,20 @@
         var txt = document.getElementById('texto')
         var ft = document.getElementById('fundo')
 
+        mn.style.boxShadow = '3px 3px 7px rgba(0, 0, 0, 0.479)'
+
         if (hora <= 12 && hora >= 6){
             
+            mn.style.backgroundColor = ' rgb(235, 213, 22)'
             txt.innerText = 'bom dia'
             ft.style.backgroundImage = 'url(dia.jpg)'
          } else if(hora <= 18 && hora >= 13){
+
+            mn.style.backgroundColor  = 'rgb(235, 168, 25)'
             txt.innerText = 'boa tarde'
             ft.style.backgroundImage = 'url(tarde.jpg)'
         }  else{
+            mn.style.backgroundColor = 'rgb(11, 11, 94)'
             txt.innerText = 'boa noite ou boa madrugada'
             ft.style.backgroundImage = 'url(noite.jpg)'
         }
