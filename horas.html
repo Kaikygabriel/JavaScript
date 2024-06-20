@@ -58,7 +58,7 @@
 
         var dia = new Date
         var hora = dia.getHours()
-
+        
         var mn = document.getElementById('main1')
         var txt = document.getElementById('texto')
         var ft = document.getElementById('fundo')
@@ -75,9 +75,13 @@
             mn.style.backgroundColor  = 'rgb(235, 168, 25)'
             txt.innerText = 'boa tarde'
             ft.style.backgroundImage = 'url(tarde.jpg)'
-        }  else{
+        }  else if (hora > 18 && hora <= 23){
             mn.style.backgroundColor = 'rgb(11, 11, 94)'
-            txt.innerText = 'boa noite ou boa madrugada'
+            txt.innerText = 'boa noite'
+            ft.style.backgroundImage = 'url(noite.jpg)'
+        } else{
+            mn.style.backgroundColor = 'rgba(3, 3, 63, 0.877)'
+            txt.innerText = 'Boa madrugada'
             ft.style.backgroundImage = 'url(noite.jpg)'
         }
     </script>
