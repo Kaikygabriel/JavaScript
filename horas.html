@@ -47,9 +47,27 @@
             left: 50%;
             transform: translate(-50%, 70%);
         }
+
+
+        header{
+            border: 1px solid black;
+            height: 84px;
+            width: 320px;
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.37);
+            font-size: 16px;
+        }
     </style>
 </head>
 <body>
+    <header>
+        <h1 id="h1-semana">Hoje é</h1>
+    </header>
     <main id="main1">
         <div id="texto"><p>Agora é</p></div>
         <div id="fundo"></div>
@@ -75,15 +93,50 @@
             mn.style.backgroundColor  = 'rgb(235, 168, 25)'
             txt.innerText = 'boa tarde'
             ft.style.backgroundImage = 'url(tarde.jpg)'
+
         }  else if (hora > 18 && hora <= 23){
+
             mn.style.backgroundColor = 'rgb(11, 11, 94)'
             txt.innerText = 'boa noite'
             ft.style.backgroundImage = 'url(noite.jpg)'
+
         } else{
+
             mn.style.backgroundColor = 'rgba(3, 3, 63, 0.877)'
             txt.innerText = 'Boa madrugada'
             ft.style.backgroundImage = 'url(noite.jpg)'
         }
+
+
+        var h1sema = document.getElementById('h1-semana')
+        var diasem = new Date
+        var diasemana = diasem.getDay()
+   
+        switch (diasemana) {
+            case 0 :
+                h1sema.innerText = 'Hoje é Domingo'
+                break
+            case 1 :
+                h1sema.innerText = 'Hoje é Segunda-Feira'
+                break 
+            case 2 :
+                h1sema.innerText ='Hoje é Terça-Feira'
+                break   
+            case 3:
+                h1sema.innerText ='Hoje é Quarta-Feira'
+                break
+            case 4 :
+               h1sema.innerText ='Hoje é Quinta-Feira' 
+               break
+            case 2 :
+                h1sema.innerText ='Hoje é Sexta-Feira' 
+                break
+             case 2 :
+                h1sema.innerText ='Hoje é Sabado'                      
+                break
+             default :
+               h1sema.innerHTML = 'ERROR(NENHUM-DIA-DA-SEMANA)'   
+            }
     </script>
 </body>
 </html>
