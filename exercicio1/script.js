@@ -13,7 +13,7 @@ function clicou(){
     // precisa colocar seempre o value, o number e para algumas ocasioes
     var genero = ''
     var img = document.createElement('img')
-    img.setAttribute('id', 'foto')
+    
    
     // dar um atributo
     if (fsex[0].checked){
