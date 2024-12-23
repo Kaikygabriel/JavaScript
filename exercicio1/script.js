@@ -19,23 +19,23 @@ function clicou(){
     if (fsex[0].checked){
         genero = 'homem'
         if( idade >= 0 && idade <= 10){
-         img.setAttribute('src', 'criança-f.jpg')
-        } else if ( idade < 21){
-
+         img.setAttribute('src', 'criança-m.jpg')
+        } else if ( idade < 20){
+            img.setAttribute('src', 'jovemfm.jpg')
         }
         else {
-
+            img.setAttribute('src', 'foto-idoso.jpg')
         }
     } else if (fsex[1].checked) {
         genero = 'mulher'
         // checked par checar qual que foi escolhido
         if( idade >= 0 && idade <= 10){
-         
+         img.setAttribute('src','criança-f.jpg')
         } else if ( idade < 21){
-
+            img.setAttribute('src', 'jovem-f.jpg')
         }
         else {
-            
+            img.setAttribute('src','idosa.jpg')
         }
     }
  
